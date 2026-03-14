@@ -21,12 +21,6 @@ async def on_ready():
     print(f"Bot connected as: {bot.user}")
     refresh_caches.start()
 
-    channel = bot.get_channel(config.CHANNEL_ID)
-    if channel:
-        await channel.send(config.WELCOME_MESSAGE)
-    else:
-        print(f"Channel not found with ID {config.CHANNEL_ID}.")
-
     await bot.tree.sync()
     await bot.tree.sync(guild=guild)
     print("Commands synced globally and in guild")

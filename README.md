@@ -51,7 +51,6 @@ pip install -r requirements.txt
 4. Configure environment variables in `.env`:
 ```env
 TOKEN=your_discord_token
-CHANNEL_ID=welcome_channel_id
 WELCOME_MESSAGE=Welcome message
 GUILD_ID=server_id
 BOT_COLOR=0xE02D60
@@ -78,7 +77,6 @@ docker-compose up -d
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `TOKEN` | Your Discord bot token | - |
-| `CHANNEL_ID` | Welcome channel ID | - |
 | `GUILD_ID` | Discord server ID | - |
 | `WELCOME_MESSAGE` | Welcome message | - |
 | `BOT_COLOR` | Embed color in hexadecimal | `0xE02D60` |
