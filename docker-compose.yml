@@ -5,7 +5,6 @@ services:
     restart: unless-stopped
     environment:
       - TOKEN=${TOKEN}
-      - WELCOME_MESSAGE=${WELCOME_MESSAGE}
       - GUILD_ID=${GUILD_ID}
       - BOT_COLOR=${BOT_COLOR}
       - API_BASE_URL=${API_BASE_URL}

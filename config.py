@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-WELCOME_MESSAGE = os.getenv("WELCOME_MESSAGE", "")
 GUILD_ID = int(os.getenv("GUILD_ID", "0"))
 BOT_COLOR = int(os.getenv("BOT_COLOR", "0xE02D60"), 16)
 API_BASE_URL = os.getenv("API_BASE_URL", "https://datafansub.bye.moe/api")

@@ -22,8 +22,7 @@ async def fetch_animes():
     global animes_cache
     if animes_cache:
         return animes_cache
-    data = await fetch_json(config.ANIMES_URL)
-    animes_cache = extract_items(data)
+    animes_cache = await fetch_all_pages(config.ANIMES_URL)
     return animes_cache
 
 
@@ -31,8 +30,7 @@ async def fetch_fansubs():
     global fansubs_cache
     if fansubs_cache:
         return fansubs_cache
-    data = await fetch_json(config.FANSUBS_URL)
-    fansubs_cache = extract_items(data)
+    fansubs_cache = await fetch_all_pages(config.FANSUBS_URL)
     return fansubs_cache
 
 
@@ -101,8 +99,8 @@ async def refresh_caches():
     global animes_cache, fansubs_cache, entries_cache
     print("Refrescando cachés de la API...")
     try:
-        animes_cache = extract_items(await fetch_json(config.ANIMES_URL))
-        fansubs_cache = extract_items(await fetch_json(config.FANSUBS_URL))
+        animes_cache = await fetch_all_pages(config.ANIMES_URL)
+        fansubs_cache = await fetch_all_pages(config.FANSUBS_URL)
         entries_cache = await fetch_all_pages(config.ENTRIES_URL)
         print("Cachés actualizados correctamente.")
     except Exception as e:

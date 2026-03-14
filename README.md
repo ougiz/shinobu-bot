@@ -51,7 +51,6 @@ pip install -r requirements.txt
 4. Configure environment variables in `.env`:
 ```env
 TOKEN=your_discord_token
-WELCOME_MESSAGE=Welcome message
 GUILD_ID=server_id
 BOT_COLOR=0xE02D60
 API_BASE_URL=https://datafansub.bye.moe/api
@@ -78,7 +77,6 @@ docker-compose up -d
 |----------|-------------|---------|
 | `TOKEN` | Your Discord bot token | - |
 | `GUILD_ID` | Discord server ID | - |
-| `WELCOME_MESSAGE` | Welcome message | - |
 | `BOT_COLOR` | Embed color in hexadecimal | `0xE02D60` |
 | `API_BASE_URL` | DataFansub API URL | `https://datafansub.bye.moe/api` |
 | `ANILIST_URL` | AniList API URL | `https://graphql.anilist.co` |
