@@ -2,6 +2,8 @@
 
 Discord bot for searching animes in the DataFansub database directly from Discord. Integrates with AniList to fetch additional information like posters, titles in different languages, and release year.
 
+Add Shinobu to your Discord server [here](https://discord.com/oauth2/authorize?client_id=1125267002420908112&permissions=18432&integration_type=0&scope=bot+applications.commands).
+
 ## Features
 
 - **Anime Search**: Search animes on DataFansub with autocomplete
@@ -105,4 +107,4 @@ shinobu-bot/
 
 ## License
 
-This project is private and not open source. All rights reserved.
+MIT
